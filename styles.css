@@ -5,6 +5,7 @@ body {
 
 button {
     height: 70px;
+    width: 270px;
     border-radius: 9999px;
-    font-size: 40px;
+    font-size: 45px;
 }
