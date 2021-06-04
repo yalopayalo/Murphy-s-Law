@@ -1,5 +1,6 @@
 body {
-    background-color: red;
+    background: conic-gradient( 
+     rgb(255, 68, 68) 40deg 50deg, rgb(0, 214, 86) 45deg 150deg);;
 }
 
 button {
