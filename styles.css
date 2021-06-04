@@ -1,0 +1,9 @@
+body {
+    background-color: red;
+}
+
+button {
+    height: 70px;
+    border-radius: 9999px;
+    font-size: 40px;
+}
