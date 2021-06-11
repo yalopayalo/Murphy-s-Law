@@ -1,11 +1,13 @@
 var options = [
     {
-      text: "маслом вверх",
-      videoSrc: "up.mp4",
+      text: "butter up",
+      imageSrc: "up-once.gif",
+    //   videoSrc: "up.mp4",
     },
     {
-      text: "маслом вниз",
-      videoSrc: "up.mp4",
+      text: "butter down",
+      imageSrc: "down-once.gif",
+    //   videoSrc: "up.mp4",
     },
   ];
   
@@ -19,7 +21,7 @@ var options = [
   var upCount = document.querySelector(".up-count");
   var downCount = document.querySelector(".down-count");
   var dropButton = document.querySelector(".drop-button");
-  var video = document.querySelector(".video");
+  var image = document.querySelector(".image");
   
   function updateBackground() {
     var total = results[0] + results[1];
@@ -45,8 +47,10 @@ var options = [
     results[optionIndex]++;
     updateBackground();
     updateCounters();
-    video.src = option.videoSrc;
-    video.play();
+    image.src = option.imageSrc;
+    image.play();
+    // video.src = option.videoSrc;
+    // video.play();
   });
   
   updateCounters();
