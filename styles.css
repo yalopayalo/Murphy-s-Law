@@ -1,8 +1,21 @@
 body {
+    margin: 0;
+  }
+  
+  .first-screen {
     background: linear-gradient(to right, green 0%, green 50%, red 50%, red 100%);
-    padding: 0 100px;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 30px 100px;
+    min-height: 100vh;
+  }
+  
+  .second-screen {
+    min-height: 100vh;
+  }
+  
+  .game-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .drop-button {
@@ -16,6 +29,7 @@ body {
   .result-text {
     text-transform: uppercase;
     text-align: center;
+    margin-top: 0;
   }
   
   .side {

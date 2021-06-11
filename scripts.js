@@ -1,13 +1,15 @@
 var options = [
     {
-      text: "law does not work",
       imageSrc: "up-once.gif",
     },
     {
-      text: "law works",
       imageSrc: "down-once.gif",
     },
   ];
+  
+  var lawWorks = "law works";
+  var lawDoesntWork = "law does not work";
+  var tryAgain = "Try again";
   
   function getRandomOptionIndex() {
     return Math.random() > 0.5 ? 0 : 1;
@@ -15,6 +17,7 @@ var options = [
   
   var results = [1, 1];
   
+  var firstScreen = document.querySelector(".first-screen");
   var resultText = document.querySelector(".result-text");
   var upCount = document.querySelector(".up-count");
   var downCount = document.querySelector(".down-count");
@@ -30,7 +33,7 @@ var options = [
       "%, red " +
       percent +
       "%, red 100%)";
-    document.body.style.background = gradient;
+    firstScreen.style.background = gradient;
   }
   
   function updateCounters() {
@@ -38,15 +41,26 @@ var options = [
     downCount.innerHTML = "butter down: " + (results[1] - 1);
   }
   
+  function updateHeader() {
+    if (results[0] > results[1]) {
+      resultText.innerHTML = lawDoesntWork;
+    } else if (results[0] < results[1]) {
+      resultText.innerHTML = lawWorks;
+    } else {
+      resultText.innerHTML = tryAgain;
+    }
+  }
+  
   dropButton.addEventListener("click", function () {
     var optionIndex = getRandomOptionIndex();
     var option = options[optionIndex];
-    resultText.innerHTML = option.text;
     results[optionIndex]++;
-    updateBackground();
-    updateCounters();
     image.src = option.imageSrc;
-    image.play();
+    setTimeout(function () {
+      updateHeader();
+      updateCounters();
+      updateBackground();
+    }, 2500);
   });
   
   updateCounters();
