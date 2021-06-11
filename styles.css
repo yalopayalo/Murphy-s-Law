@@ -5,11 +5,11 @@ body {
   .first-screen {
     background: linear-gradient(to right, green 0%, green 50%, red 50%, red 100%);
     padding: 30px 100px;
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
   
   .second-screen {
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
   
   .game-content {
