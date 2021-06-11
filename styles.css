@@ -1,17 +1,21 @@
 body {
     background: linear-gradient(to right, green 0%, green 50%, red 50%, red 100%);
     padding: 0 100px;
+    max-width: 800px;
+    margin: 0 auto;
   }
   
   .drop-button {
     height: 80px;
-    width: 260px;
+    width: 240px;
     border-radius: 9999px;
     font-size: 45px;
+    align-content: center;
   }
   
   .result-text {
     text-transform: uppercase;
+    text-align: center;
   }
   
   .side {
