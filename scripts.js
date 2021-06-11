@@ -1,10 +1,10 @@
 var options = [
     {
-      text: "butter up",
+      text: "law does not work",
       imageSrc: "up-once.gif",
     },
     {
-      text: "butter down",
+      text: "law works",
       imageSrc: "down-once.gif",
     },
   ];
