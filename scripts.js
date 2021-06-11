@@ -9,7 +9,7 @@ var options = [
   
   var lawWorks = "law works";
   var lawDoesntWork = "law does not work";
-  var tryAgain = "Try again";
+  var tryAgain = "drop again to know the result";
   
   function getRandomOptionIndex() {
     return Math.random() > 0.5 ? 0 : 1;
