@@ -2,12 +2,10 @@ var options = [
     {
       text: "butter up",
       imageSrc: "up-once.gif",
-    //   videoSrc: "up.mp4",
     },
     {
       text: "butter down",
       imageSrc: "down-once.gif",
-    //   videoSrc: "up.mp4",
     },
   ];
   
@@ -36,8 +34,8 @@ var options = [
   }
   
   function updateCounters() {
-    upCount.innerHTML = "up: " + (results[0] - 1);
-    downCount.innerHTML = "down: " + (results[1] - 1);
+    upCount.innerHTML = "butter up: " + (results[0] - 1);
+    downCount.innerHTML = "butter down: " + (results[1] - 1);
   }
   
   dropButton.addEventListener("click", function () {
@@ -49,8 +47,6 @@ var options = [
     updateCounters();
     image.src = option.imageSrc;
     image.play();
-    // video.src = option.videoSrc;
-    // video.play();
   });
   
   updateCounters();

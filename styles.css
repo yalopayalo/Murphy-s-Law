@@ -1,8 +1,4 @@
 body {
-    /* background: conic-gradient(
-      rgb(0, 214, 86) 45deg 150deg,
-      rgb(255, 68, 68) 40deg 50deg
-    ); */
     background: linear-gradient(to right, green 0%, green 50%, red 50%, red 100%);
     padding: 0 100px;
   }
