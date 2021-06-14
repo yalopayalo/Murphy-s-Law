@@ -22,7 +22,7 @@ var options = [
   var upCount = document.querySelector(".up-count");
   var downCount = document.querySelector(".down-count");
   var dropButton = document.querySelector(".drop-button");
-  var image = document.querySelector(".image");
+  var image = document.querySelector(".hleb");
   
   function updateBackground() {
     var total = results[0] + results[1];
