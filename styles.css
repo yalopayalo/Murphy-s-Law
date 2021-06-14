@@ -15,8 +15,12 @@ body {
     align-items: center;
   }
 
-  .img {
+  .hleb {
     width: 900px;
+  }
+
+  .arrow {
+    width: 60px;
   }
   
   .drop-button {
