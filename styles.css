@@ -1,86 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-  }
-  
-  .first-screen {
-    background: linear-gradient(to right, green 0%, green 50%, red 50%, red 100%);
-    padding: 75px 100px;
-    min-height: 100vh;
-  }
-  
-  .game-content {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  margin: 0;
+}
 
-  .hleb {
-    width: 900px;
-  }
+.first-screen {
+  background: linear-gradient(to right, rgb(0, 205, 82) 0%,rgb(0, 205, 82) 50%, rgb(255, 22, 36) 50%, rgb(255, 22, 36) 100%);
+  padding: calc(30 / 1440 * 100vw) 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .arrow {
-    width: 60px;
-  }
-  
-  .drop-button {
-    height: 80px;
-    width: 250px;
-    border-radius: 9999px;
-    font-size: 40px;
-    align-content: center;
-    background-color: white;
-    border-color: transparent;
-    font-family: Suisse Int\'l Book, Suisse Int\'l;
-  }
-  
-  .result-text {
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 0;
-    font-size: 40px;
-    font-family: Suisse Int\'l Book, Suisse Int\'l;
-  }
-  
-  .side {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    text-transform: uppercase;
-    font-family: Suisse Int\'l Book, Suisse Int\'l;
-  }
-  
-  .up {
-    left: 0;
-  }
-  
-  .up-count {
-    transform: rotate(-90deg);
-  }
-  
-  .down {
-    right: 0;
-  }
-  
-  .down-count {
-    transform: rotate(90deg);
-  }
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .second-screen {
-    min-height: 100vh;
-    min-width: 100vw;
-    font-size: 30px;
-    /* text-transform: uppercase; */
-    font-family: Suisse Int\'l Book, Suisse Int\'l;
-  }
+.game-content {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .left-text {
-    padding: 90px 100px;
-    width: 500px;
-  }
+.hleb {
+  height: 50vh;
+}
 
-  .right-text {
-    padding: 90px 700px;
-    width: 500px;
-  }
+.arrow {
+  width: 60px;
+}
+
+.drop-button {
+  height: 80px;
+  width: 250px;
+  border-radius: 9999px;
+  font-size: 40px;
+  align-content: center;
+  background-color: white;
+  border-color: transparent;
+  font-family: Suisse Int\'l Book, Suisse Int\'l;
+}
+
+.scroll-button {
+  background-color: transparent;
+  border: 0;
+}
+
+.result-text {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  font-size: 40px;
+  font-family: Suisse Int\'l Book, Suisse Int\'l;
+}
+
+.side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: Suisse Int\'l Book, Suisse Int\'l;
+}
+
+.up {
+  left: 0;
+}
+
+.up-count {
+  transform-origin: center top;
+  transform: translateX(-50%) rotate(-90deg);
+}
+
+.down {
+  right: 0;
+}
+
+.down-count {
+  transform-origin: center top;
+  transform: translateX(50%) rotate(90deg);
+}
+
+.second-screen {
+  min-height: 100vh;
+  min-width: 100vw;
+  font-size: 30px;
+  /* text-transform: uppercase; */
+  font-family: Suisse Int\'l Book, Suisse Int\'l;
+  display: flex;
+}
+
+.left-text {
+  width: 660px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.right-text {
+  width: 660px;
+  padding-top: 30px;
+  padding-left: 70px;
+}
