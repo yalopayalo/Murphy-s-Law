@@ -7,6 +7,33 @@ var options = [
   },
 ];
 
+var gifStatuses = options.map(() => false);
+console.log(gifStatuses);
+
+function preloadGifs() {
+  options.forEach(function (option, optionIndex) {
+    console.log("load", option);
+    var img = new Image();
+    img.onload = function () {
+      console.log("loaded", optionIndex);
+      gifStatuses[optionIndex] = true;
+      updateDropButton();
+    };
+    img.src = option.imageSrc;
+  });
+}
+
+preloadGifs();
+
+var dropButton = document.querySelector(".drop-button");
+
+function updateDropButton() {
+  if (gifStatuses.every((status) => status)) {
+    console.log("enable drop button");
+    dropButton.disabled = false;
+  }
+}
+
 var lawWorks = "law works";
 var lawDoesntWork = "law does not work";
 var tryAgain = "drop again to know the result";
@@ -23,7 +50,7 @@ var secondScreen = document.querySelector(".second-screen");
 var resultText = document.querySelector(".result-text");
 var upCount = document.querySelector(".up-count");
 var downCount = document.querySelector(".down-count");
-var dropButton = document.querySelector(".drop-button");
+
 var scrollButton = document.querySelector(".scroll-button");
 var image = document.querySelector(".hleb");
 
